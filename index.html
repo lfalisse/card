@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<title></title>
+<style>
+body{
+	height: 95%;
+	width: 100%;
+	font-family: sans-serif;
+}
+#container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 97vh;
+}
+#card{
+	width: 60vmin;
+    height: 36vmin;
+	/*background-color: beige;*/
+	/*position: absolute;
+  	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);*/
+}
+h1,span{
+	font-size: 2.4vmin;
+	font-weight: normal;
+}
+#name{
+	height:45%;
+	width:100%;
+}
+.info{
+	width: 80%;
+    margin: 0 0;
+    line-height: 3.2vmin;
+}
+#photo:hover, #design:hover, #email:hover{
+	text-decoration: underline;
+	cursor: pointer;
+}
+.line1{
+	height:45%;
+	width:50%;
+	position:relative;
+    bottom:0;
+    float: left;
+}
+.line2{
+	height:45%;
+	width:50%;
+	position:relative;
+    bottom:0;
+    line-height: 2.2vmin;
+    float: right;
+}
+#num,#email{
+	float: right;
+}
+a{
+	color:#0e0e9c;
+}
+#subphoto,#subdesign{
+	margin-left: 8%;
+	line-height: 5vmin;
+	cursor: pointer;
+}
+#subphoto:hover,#subdesign:hover,{
+	opacity:0.8;
+}
+.subphoto,.subdesign{
+	font-size: 2.3vmin;
+}
+.dot:hover {
+	display: block;
+}
+#afeed,#aweb,#atype,#abrand{
+	color:black;
+	text-decoration: none;
+}
+</style>
+</head>
+<body>
+<div id=container>	
+  <div id=card>
+	<h1 id=name>Louis Falisse</h1>
+	<div class=info>
+		<div class=line1><h1 id=photo>photo</h1><h1 id=design>design</h1></div>
+		<div class=line2><h1 id=num>+1 347 241 9852</h1><h1 id=email><a href=mailto:lfalisse@gmail.com? >lfalisse@gmail.com</a></h1></div>
+	</div>
+  </div>
+</div>
+</body>
+<script>
+$("#photo").click(function() {
+  var clicks = $(this).data('clicks');
+  if (clicks) {
+     $('.subphoto').remove();
+     $("#photo").css({"text-decoration": "none"})
+   
+  } else {
+     $( "<div id=subphoto><h1 class=subphoto><a id=afeed href='feed/feed.html'>feed</a></h1><h1 class=subphoto>street</h1><h1 class=subphoto>portrait</h1></div>" ).insertAfter( "#photo" );
+    $("#photo").css({"text-decoration": "underline"})
+  }     
+    $(this).data("clicks", !clicks);
+});
+$("#design").click(function() {
+  var clicks = $(this).data('clicks');
+  if (clicks) {
+     $('.subdesign').remove();
+     $("#design").css({"text-decoration": "none"})
+   
+  } else {
+     $( "<div id=subdesign><h1 class=subdesign><a id=aweb href='web/web.html'>web</a></h1><h1 class=subdesign><a id=atype href='type/type.html'>type</a></h1><h1 class=subdesign><a id=abrand href='branding/branding.html'>branding</a></h1></div>" ).insertAfter( "#design" );
+    $("#design").css({"text-decoration": "underline"})
+  }     
+    $(this).data("clicks", !clicks);
+});
+</script>
+</html>
