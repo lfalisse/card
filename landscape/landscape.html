@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.js"></script> -->
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script src="masonry.pkgd.min.js"></script>
+<head>
+	<title>Landscape</title>
+<style>
+#landscape{Landscape  line-height: 35px;
+  font-size: 2.4vmin;
+  font-weight: normal;
+  border-style: solid;
+  border-width: 2px;
+  height: 5%;
+  width: 5%;
+  position: relative;
+  left: 50%;
+  margin-top: 2.5%;
+  margin-left: -50px;
+  text-align:center;
+  display: block;
+}
+.grid{
+    top: 33px;
+	margin: 0 auto;
+	width: 80%;
+	max-width: 80%;
+}
+.grid-sizer,.grid-item {
+	width: 30%; 
+	margin-bottom: 10px;
+}
+img{
+	width: 100%;
+}
+/*.grid-item--width2 { 
+	width: 400px; 
+}*/
+</style>
+</head>
+<body>
+<h1 id=landscape>Landscape</h1>
+<div class="grid">
+  <!-- <div class="grid-item grid-item--width2">...</div> -->
+  <div class="grid-sizer"><img src='image/1.jpg'></div>
+  <div class="grid-item"><img src='image/1.jpg'></div>
+  <div class="grid-item"><img src='image/2.jpg'></div>
+  <div class="grid-item"><img src='image/3.jpg'></div>
+  <div class="grid-item"><img src='image/4.jpg'></div>
+  <div class="grid-item"><img src='image/5.jpg'></div>
+  <div class="grid-item"><img src='image/6.jpg'></div>
+  <div class="grid-item"><img src='image/7.jpg'></div>
+  <div class="grid-item"><img src='image/8.jpg'></div>
+  <div class="grid-item"><img src='image/9.jpg'></div>
+  <div class="grid-item"><img src='image/10.jpg'></div>
+  <div class="grid-item"><img src='image/11.jpg'></div>
+  <div class="grid-item"><img src='image/12.jpg'></div>
+  <div class="grid-item"><img src='image/13.jpg'></div>
+  <div class="grid-item"><img src='image/14.jpg'></div>
+  <div class="grid-item"><img src='image/15.jpg'></div>
+</div>
+<script>
+$('.grid').masonry({
+  // options
+  itemSelector: '.grid-item',
+  columnWidth: 33,
+  percentPosition: true,
+  gutter: 15,
+  fitWidth: true
+});
+
+// var $grid = $('.grid').imagesLoaded( function() {
+//   // init Masonry after all images have loaded
+//   $grid.masonry({
+//   itemSelector: '.grid-item',
+//   columnWidth: 120,
+//   percentPosition: true,
+//   gutter: 10,
+//   fitWidth: true
+//   });
+// });
+</script>
+</body>
+</html>

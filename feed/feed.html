@@ -5,6 +5,9 @@
 <script type="text/javascript" src="instafeed.min.js"></script>
 	<title></title>
 <style>
+body{
+  font-family: sans-serif;
+}
 #instafeed { 
   display: grid;
   width: 80%;
@@ -22,9 +25,42 @@
   padding-bottom: 6%;
   text-align: center;
 }
+#web{
+  line-height: 35px;
+  font-size: 2.4vmin;
+  font-weight: normal;
+/*  text-align: right;
+  justify-self: baseline;*/
+  margin-top: 13%;
+  margin-left: 18.5%;
+  position: relative;
+  display: block;
+  text-decoration: underline;
+  font-weight: 600;
+}
+#sub{
+  margin-left: 18.5%;
+  margin-top: -0.5%;
+}
+a:first-of-type{
+  object-fit: cover;
+}
+#firstlink {
+    margin-left: 65%;
+    padding-right: 3%;
+    color: black;
+}
+#navigation {
+    position: absolute;
+    margin-top: -11.5%;
+    opacity: 0.8;
+}
 </style>
 </head>
 <body>
+<p id="navigation"><a id=firstlink href='../index.html'>home</a></p>
+<h1 id=web>photo feed</h1>
+<p id=sub>@louis.sef</p>
 <div id="instafeed"></div>
 <div id=buttonwrap>
 <button id="btn-instafeed-load" class="btn">Load more</button>

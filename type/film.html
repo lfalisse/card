@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<title></title>
+<style>
+body{
+  font-family: sans-serif;
+  font-size: 2.4vmin;
+ /* background-color: #f8f9fb;*/
+}
+/* The sidebar menu */
+.sidebar {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: white;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+}
+
+/* The sidebar links */
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  /*font-size: 25px;*/
+  color: black;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidebar a:hover {
+  text-decoration: underline;
+}
+
+/* Position and style the close button (top right corner) */
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  /*font-size: 36px;*/
+  margin-left: 50px;
+}
+
+/* The button used to open the sidebar */
+.openbtn {
+  font-size: 2vmin;
+  cursor: pointer;
+  color: black;
+  padding: 6px 17px;
+  border: none;
+  transition: 0.3s;
+}
+button:active{
+	border-style: outset;
+}
+
+.openbtn:hover {
+  /*background-color: #444;*/
+  text-decoration: underline;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s; /* If you want a transition effect */
+  /*padding: 20px;*/
+}
+#web{
+  line-height: 35px;
+  font-size: 2.4vmin;
+  font-weight: normal;
+/*  text-align: right;
+  justify-self: baseline;*/
+  margin-top: 13%;
+  margin-left: 18.5%;
+  position: relative;
+  display: block;
+  text-decoration: underline;
+  font-weight: 600;
+}
+.colec{
+  margin-top: 2%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 46%;
+  height:auto;
+  padding:1px;
+  /*background-color:#ff0;*/
+}
+#gap{
+	height:25px;
+	width:100%;
+}
+
+#sub{
+  margin-left: 18.5%;
+  margin-top: -0.5%;
+}
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+#firstlink{
+  margin-left: 2%;
+  padding-right: 3%;
+}
+#navigation{
+  font-size: 90%;
+  opacity: 0.8;
+}
+a{
+  color: black;
+}
+</style>
+</head>
+<body>
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <p id=current>Collection</p>
+  <a href="#">Real Time</a>
+  <a href="#">Calendar</a>
+  <a href="#">Sketch</a>
+</div>
+
+<div id="main">
+  <p id="navigation"><a id=firstlink href='../index.html'>home</a><span>    </span><a href='../web/web.html'> design</a></p> 
+  <h1 id=web>thirty-five mm in the lower east side </h1>
+  <p id=sub>design: type</p>
+  <div id=collection>
+  	<img class=colec src='image/351.jpg'>
+  	<div id=gap></div>
+  	<img class=colec src='image/352.jpg'>
+    <div id=gap></div>
+    <img class=colec src='image/353.jpg'>
+  </div>
+</div>
+
+<script>
+/* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  $(".openbtn").css({"opacity": "0"})
+}
+
+/* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+  $(".openbtn").css({"opacity": "100"})
+}
+</script>
+</body>
+</html>
