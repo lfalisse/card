@@ -62,7 +62,7 @@ p{
     /*text-decoration: underline;*/
     font-weight: 600;
 }
-#desc{
+.desc{
 	text-align: right;
     justify-self: baseline;
 }
@@ -81,6 +81,18 @@ a{
 	color:black;
 	opacity: 0.9;
 }
+.titles:first-child {
+	text-decoration: underline;
+}
+.desc:first-child {
+	text-decoration: underline;
+}
+.type:first-child {
+	text-decoration: underline;
+}
+.date:first-child {
+	text-decoration: underline;
+}
 </style>
 </head>
 <body>
@@ -92,7 +104,7 @@ a{
 		<img src="image/collection.gif">
 		<img src="image/titan.gif">
 	</div> -->
-	<div id=titles>
+	<div class=titles>
 		<p><a href='https://lfalisse.github.io/ci19/studio/collection/index.html'>collections</a></p>
 		<p><a href='../type/film.html'>35mm in the les</a></p>
 		<p><a href='https://lfalisse.github.io/ci19/studio/real-time/index.html'>real time</a></p>
@@ -101,7 +113,7 @@ a{
 		<p><a href='../type/recipe.html'>banana bread</a></p>
 		<p><a href='../type/ellis.html'>topography of typography</a></p>
 	</div>
-	<div id=desc>
+	<div class=desc>
 		<p>photo archive</p>
 		<p>book design</p>
 		<p>nypd database</p>
@@ -110,7 +122,7 @@ a{
 		<p>typographic recipe</p>
 		<p>poster series</p>
 	</div>
-	<div id=type>
+	<div class=type>
 		<p>web</p>
 		<p>type</p>
 		<p>web</p>
@@ -119,7 +131,7 @@ a{
 		<p>type</p>
 		<p>type</p>
 	</div>
-	<div id=date>
+	<div class=date>
 		<p>04-12-19</p>
 		<p>12-17-18</p>
 		<p>05-07-19</p>
